@@ -1,0 +1,6 @@
+[submodule "front-livraria"]
+	path = front-livraria
+	url = https://github.com/MonicaAlvesP/front-livraria.git
+[submodule "api-livraria"]
+	path = api-livraria
+	url = https://github.com/MonicaAlvesP/api-livraria.git
