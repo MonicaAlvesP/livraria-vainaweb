@@ -6,8 +6,8 @@ Este é um projeto fullstack de uma plataforma de doação de livros desenvolvid
 
 O repositório está organizado em dois subprojetos principais:
 
-- front-livraria: Frontend desenvolvido em React
-- api-livraria: API desenvolvida em Flask (Python)
+- **front-livraria**: Frontend desenvolvido em React
+- **api-livraria**: API desenvolvida em Flask (Python)
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -27,8 +27,25 @@ O repositório está organizado em dois subprojetos principais:
 
 - Página inicial com informações sobre os benefícios de doar livros
 - Cadastro de livros para doação
-- Visualização dos livros doados, organizados por categoria
+- Visualização de todos os livros doados
+- Visualização detalhada de cada livro contendo sinopse
 - Interface responsiva para diferentes dispositivos
+
+## 🔌 Rotas e Endpoints
+
+### Frontend
+
+- `/`: Página inicial com informações sobre doação de livros
+- `/livrosDoados`: Exibe todos os livros disponíveis no sistema
+- `/queroDoar`: Formulário para doação de novos livros
+- `/detalhesLivro/:id`: Visualização detalhada do livro selecionado
+
+### API Backend
+
+- `GET /`: Página inicial da API
+- `POST /doar`: Cadastra um novo livro
+- `GET /livros-doados`: Retorna todos os livros cadastrados
+- `GET /livros-doados/:id`: Retorna detalhes de um livro específico
 
 ## 🏁 Como Executar
 
@@ -37,26 +54,38 @@ O repositório está organizado em dois subprojetos principais:
 - Node.js e npm para o frontend
 - Python para o backend
 
-### Frontend
+### 📥 Como Baixar o Projeto com Submódulo
+
+1. Clone o repositório principal com o comando:
 
 ```bash
-cd front-livraria
-npm install
-npm run dev
+git clone --recurse-submodules https://github.com/MonicaAlvesP/livraria-vainaweb.git
 ```
 
-### Backend
+2. Caso já tenha clonado o repositório sem os submódulos, inicialize-os com:
 
 ```bash
-cd api-livraria
-python -m venv venv
-# No Windows:
-venv\Scripts\activate
-# No macOS/Linux:
-source venv/bin/activate
-pip install -r requirements.txt
-python app.py
+git submodule update --init --recursive
 ```
+
+3. Navegue até os diretórios dos subprojetos para instalar as dependências e subir o servidor:
+
+- **Frontend**:
+
+  ```bash
+  cd front-livraria
+  npm install
+  npm run dev
+  ```
+
+- **Backend**:
+  ```bash
+  cd api-livraria
+  pip install -r requirements.txt
+  python app.py
+  ```
+
+4. Execute os subprojetos conforme as instruções específicas de cada um.
 
 ## 📝 Aprendizados
 
